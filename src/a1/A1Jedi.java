@@ -90,7 +90,8 @@ public class A1Jedi {
 	}
 	
 	//Finds the number of each type of item in the store a customer bought
-	public static int[] findItemsBought(int[] itemQuantities, String[] itemsBought, String[] itemNames)
+	public static int[] findItemsBought(int[] itemQuantities, String[] itemsBought,
+										String[] itemNames)
 	{
 		int[] customerBuys = new int[itemNames.length];
 		for (int i = 0; i < itemNames.length; i++)
@@ -99,7 +100,7 @@ public class A1Jedi {
 			{
 				if (itemNames[i].equals(itemsBought[j]))
 				{
-					customerBuys[i] = itemQuantities[j];
+					customerBuys[i] += itemQuantities[j];
 				}
 			}
 		}
